@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="article-detail">
+        <div class="article">
+            <center>
+            <img src="{{ article.thumb.url }}">
+            </center>
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.body }}</p>
+            <p>{{ article.date }}</p>
+            <br>
+            {% if authenticated %}
+            <input type="submit" value="Delete">
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
